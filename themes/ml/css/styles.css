@@ -1,0 +1,26 @@
+/* Matt Lawrey specific styles - Aug 13 */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: ubuntu,sans-serif;
+}
+
+p {
+	font-family: ubuntu,sans-serif;
+}
+
+
+.navbar-inner {
+	border-width: 0 0 0px;
+}
+
+.hero-unit {
+	padding: 0px;
+}
+
+.intro {
+	background-color: #6ABB45;
+	color: #fff;
+	background-image: url('../img/matt-pic.jpg');
+	background-repeat:no-repeat;
+	background-position:right; 
+}
