@@ -30,7 +30,7 @@ public function getCMSFields() {
   $gridField2 = new GridField("Herounit", "Stuff for homepage", $this->Herounit(), $gridFieldConfig);
  
   $fields->addFieldToTab("Root.Policy", $gridField);
-  $fields->addFieldToTab("Root.Herounit", $gridField2);
+  $fields->addFieldToTab("Root.HeroUnit", $gridField2);
 
   return $fields;
  }

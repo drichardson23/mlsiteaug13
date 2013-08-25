@@ -1,21 +1,56 @@
 /* Matt Lawrey specific styles - Aug 13 */
+html{
+  border-bottom:10px solid #BBBBBB;
+}
+body{
+  padding-top: 40px;
+  color:#808080;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: ubuntu,sans-serif;
+  font-weight: normal;
 }
-
 p {
-	font-family: ubuntu,sans-serif;
+	/*font-family: ubuntu,sans-serif;*/
 }
 
 
-.navbar-inner {
-	border-width: 0 0 0px;
+/*Homepage*/
+
+.homepage-hero{
+  text-align: center;
+  background: #00aced;
+  margin: 0 0 1em;
 }
 
-.hero-unit {
-	padding: 0px;
+.homepage-blurb-shader{
+  background:url('../img/blurb-shader.png') 50% 50% repeat-y;
+  color: #fff;
+  font-style: italic;
 }
+  .homepage-blurb-shader-inner{
+    position: relative;
+    background: #6abc45;
+  }
+  .homepage-blurb-shader h2{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 60%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .homepage-blurb-shader h2:before{
+    content:'';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .homepage-blurb-shader h2 span{
+    vertical-align: middle;
+    display: inline-block;
+  }
 
 .intro {
 	background-color: #6ABB45;

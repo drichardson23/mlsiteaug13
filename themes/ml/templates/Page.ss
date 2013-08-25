@@ -13,15 +13,7 @@
     <link href="$ThemeDir/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="$ThemeDir/css/styles.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-      body {
-        padding-top: 120px;
-        padding-bottom: 1px;
-      }
 
-
-
-    </style>
     <% require themedCSS(bootstrap-responsive) %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -85,14 +77,40 @@
 
           </div><!--/.nav-collapse -->
           <% end_if %>
-
-
-
-
-
         </div>
       </div>
     </div>
+
+
+    <% if $ClassName == HomePage %>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <% if  $Herounit %>
+
+      <div class="homepage-hero">
+        <% loop $Herounit.Limit(1) %> 
+        $Image
+        <% end_loop %>
+      </div>
+
+      <div class="homepage-blurb-shader clearfix">
+        <div class="container homepage-blurb-shader-inner">     
+          <div class="row">
+            <div class="span8">
+            <% loop $Herounit.Limit(1) %>
+              <h2><span>$Blurb</span></h2>
+            <% end_loop %>
+            </div>
+            <div class="span4">
+              $siteConfig.CampaignImage.setWidth(370)
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <% end_if %>
+    <% end_if %>
 
     <div class="container">
 

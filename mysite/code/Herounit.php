@@ -4,7 +4,7 @@
   
   public static $db = array(
     'Name'=>'Varchar',  
-  'Blurb'=>'HTMLText',
+    'Blurb'=>'Text',
 
   );
  

@@ -9,9 +9,11 @@ $databaseConfig = array(
 	"server" => 'localhost',
 	"username" => 'root',
 	"password" => '',
-	"database" => 'ss_ml',
+	"database" => 'ss_mldb',
 	"path" => '',
 );
+
+Object::add_extension('SiteConfig', 'CustomSiteConfig');
 
 MySQLDatabase::set_connection_charset('utf8');
 
