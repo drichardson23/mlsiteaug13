@@ -36,14 +36,5 @@ class PolicyPage extends Page {
 
 
 
-class PolicyPage_Controller extends Page_Controller {
-
-  public function cssSafe($string){
-    return 'po';
-    return preg_replace('/\W+/', '', $string);
-  }
-  function GetPageId(){
-      return $this->ID;
-  }
-}
+class PolicyPage_Controller extends Page_Controller {}
 ?>

@@ -37,7 +37,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none !important;
   border: none;
 }
-.navbar-inner .nav{}
+.navbar-inner .nav{
+  width: 100%;
+}
 .navbar-inner .nav li{}
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
@@ -48,14 +50,41 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 3em;
   color: #BBBBBB;
 }
+.navbar .navbar-inner .nav li a:hover{
+  color: #828282;
+}
+
 
 .nav-collapse{
   background: #fff;
 }
-  .nav-collapse .nav a {
+.nav-collapse .nav{
+  border-bottom: 5px solid #6ABC45;
+}
+.navbar .navbar-inner  .nav-collapse .nav  li a {
     font-weight: normal !important;
+    padding: .5em 1em;
   }
 
+/*FB link*/
+@media (min-width: 979px) {
+  .navbar .navbar-inner .nav li.fb-nav-link{
+    float: right;
+  }
+    .navbar .navbar-inner .nav li.fb-nav-link a{
+      width: 30px;
+      height: 30px;
+      background: url(../img/fb.png);
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-indent: 100px;
+      opacity: .5;
+    }
+    .navbar .navbar-inner .nav li.fb-nav-link a:hover{
+       opacity: 1;
+    }
+}
 /*Homepage*/
 
 .homepage-hero{
@@ -138,3 +167,11 @@ h1, h2, h3, h4, h5, h6 {
     .homepage-policy-details{
       font-style: italic;
     }
+
+/*Policy page*/
+.policypage-policy{
+  margin-bottom: 0em;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 3em 0;
+
+}

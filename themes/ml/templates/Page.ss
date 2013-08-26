@@ -40,30 +40,15 @@
             <div class="nav-collapse">
              
               <ul class="nav">
-                 <% control Menu(1) %>   
-                 <!--   <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle -->
+                <% control Menu(1) %>   
+                <!--   <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle -->
 
-              <% if Children && $Title !="Home" %>
-              <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle 
-
-                    <b class="caret"></b>
-              <% else %>
-
-              <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle 
-
-               <% end_if %>
-
-                    </a>
-                       <% if Children && $Title !="Home" %>
-                          <ul class="dropdown-menu">
-                          <% control Children %>
-                             <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle</a></li>
-                          <% end_control %>
-                          </ul>
-                       <% end_if %>
-                    </li>
-                 <% end_control %>
+                <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle</a></li>
+                <% end_control %>
+                <li class="fb-nav-link"><a href="http://www.facebook.com/mattlawreyforNCC">Like Matt on Facebook</a></li>
               </ul>
+
+              
 
             </div><!--/.nav-collapse -->
             <% end_if %>
