@@ -10,7 +10,7 @@
       <li class="homepage-policy">
       <h3 class="homepage-policy-title">$Name</h3>
       <div class="homepage-policy-details">
-       $Summary
+        $Summary
       </div>
       </li>
       <% end_loop %>       
