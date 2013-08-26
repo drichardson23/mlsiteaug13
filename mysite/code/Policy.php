@@ -1,7 +1,6 @@
 <?php 
-//link existing broken.
+
   class Policy extends DataObject { 
-    //static $default_sort = 'SortBy';
 
     static $singular_name = 'Policy';
     static $plural_name = 'Policies';
@@ -37,11 +36,10 @@
       return $fields;
     }
 
-
     public function cssID(){
       return preg_replace('/\W+/', '-', $this->UrlFragment );
     }
 
-  }
+ }
 
 ?>
