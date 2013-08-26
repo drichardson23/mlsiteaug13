@@ -37,6 +37,11 @@
       return $fields;
     }
 
+
+    public function cssID(){
+      return preg_replace('/\W+/', '-', $this->UrlFragment );
+    }
+
   }
 
 ?>
