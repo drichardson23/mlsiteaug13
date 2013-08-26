@@ -1,20 +1,52 @@
 /* Matt Lawrey specific styles - Aug 13 */
 html{
   border-bottom:10px solid #BBBBBB;
+  height: calc(100% - 10px);
+
 }
 body{
-  padding-top: 40px;
   color:#808080;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: ubuntu,sans-serif;
   font-weight: normal;
-}
-p {
-	/*font-family: ubuntu,sans-serif;*/
+  margin: 0 0 1em;
 }
 
+
+/* NAVBAR */
+.navbar{
+  font-family: ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  height: 40px;
+  margin: 100px 0 2em;
+  box-shadow: none !important;
+  border-bottom: 5px solid #6abc45;
+}
+.homepage-navbar{
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 0;
+}
+.navbar-inner{
+  background: #fff;
+  box-shadow: none !important;
+  border: none;
+}
+.navbar-inner .nav{}
+.navbar-inner .nav li{}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #fff;
+    color: #555555;
+}
+.navbar .navbar-inner .nav li a{
+  padding: 0 3em;
+  color: #BBBBBB;
+}
 
 /*Homepage*/
 
@@ -28,7 +60,17 @@ p {
   background:url('../img/blurb-shader.png') 50% 50% repeat-y;
   color: #fff;
   font-style: italic;
+  margin-bottom: 1em;
 }
+
+@media (max-width: 767px) {
+ .homepage-blurb-shader{
+    padding: 2em;
+    background:none;
+    background: #6abc45;
+ }
+}
+
   .homepage-blurb-shader-inner{
     position: relative;
     background: #6abc45;
@@ -41,6 +83,22 @@ p {
     height: 100%;
     vertical-align: middle;
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .homepage-blurb-shader h2{
+      font-size: 1.5em;
+      line-height: 1.2;
+    }
+  }
+
+  @media (max-width: 767px) {
+     .homepage-blurb-shader h2{
+      position: static;
+      width: auto;
+      height: auto;
+     }
+  }
+
+
   .homepage-blurb-shader h2:before{
     content:'';
     display: inline-block;
@@ -52,10 +110,23 @@ p {
     display: inline-block;
   }
 
-.intro {
-	background-color: #6ABB45;
-	color: #fff;
-	background-image: url('../img/matt-pic.jpg');
-	background-repeat:no-repeat;
-	background-position:right; 
+.homepage-policies{
+  margin: 0;
+  list-style: none;
 }
+  .homepage-policy{
+    background: url(../img/tick.png) no-repeat;
+    padding-left:35px;
+    margin-bottom: 2em;
+  }
+    .homepage-policy-title{
+      font-size: 1.3em;
+      line-height: 25px;
+      border-bottom: 1px solid #E6E6E6;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+
+    .homepage-policy-details{
+      font-style: italic;
+    }
