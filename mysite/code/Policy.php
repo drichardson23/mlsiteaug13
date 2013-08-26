@@ -40,6 +40,7 @@
       return preg_replace('/\W+/', '-', $this->UrlFragment );
     }
 
+
  }
 
 ?>
