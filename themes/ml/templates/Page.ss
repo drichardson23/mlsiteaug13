@@ -35,8 +35,6 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="/"></a>
-
 
            <% if Menu(1) %>
             <div class="nav-collapse">

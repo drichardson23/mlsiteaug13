@@ -1,15 +1,22 @@
 <?php
 
 class HomePage extends Page {
-  static $db = array(
-  );
+  static $db = array();
 
-  static $has_one = array(
-  );
+  static $has_one = array();
 
   public static $has_many = array(
-    'Policy' => 'Policy',
     'Herounit' => 'Herounit'
+  );
+
+  public static $many_many = array(
+    'Policies' => 'Policy',
+  );
+
+  public static $many_many_extraFields=array(
+    'Policies'=>array(
+        'SortOrder'=>'Int'
+    )
   );
 
 public function getCMSFields() {
@@ -26,11 +33,12 @@ public function getCMSFields() {
    new GridFieldDeleteAction(),
    new GridFieldDetailForm()
   );
-  $gridField = new GridField("Policy", "Some policy points", $this->Policy(), $gridFieldConfig);
-  $gridField2 = new GridField("Herounit", "Stuff for homepage", $this->Herounit(), $gridFieldConfig);
  
-  $fields->addFieldToTab("Root.Policy", $gridField);
-  $fields->addFieldToTab("Root.HeroUnit", $gridField2);
+  $conf=GridFieldConfig_RelationEditor::create(10);
+  $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+  $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
+
+  $fields->addFieldToTab("Root.HeroUnit", new GridField("Herounit", "Stuff for homepage", $this->Herounit(), $gridFieldConfig));
 
   return $fields;
  }

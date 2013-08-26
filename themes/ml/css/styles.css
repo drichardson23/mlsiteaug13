@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* NAVBAR */
 .navbar-wrapper{border-bottom: 5px solid #6abc45; margin-bottom: 2em;}
-.homepage-navbar-wrapper{border-bottom: 1px solid #bbb;}
+.homepage-navbar-wrapper{border-bottom: 1px solid #bbb; margin-bottom: 0;}
 .navbar{
   font-family: ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 20px;
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 .navbar-inner{
-  background: #fff;
+  background: transparent;
   box-shadow: none !important;
   border: none;
 }
@@ -48,6 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 3em;
   color: #BBBBBB;
 }
+
+.nav-collapse{
+  background: #fff;
+}
+  .nav-collapse .nav a {
+    font-weight: normal !important;
+  }
 
 /*Homepage*/
 
