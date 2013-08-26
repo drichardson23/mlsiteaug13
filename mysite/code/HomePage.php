@@ -2,7 +2,6 @@
 
 class HomePage extends Page {
   static $db = array();
-
   static $has_one = array();
 
   public static $has_many = array(
@@ -19,30 +18,34 @@ class HomePage extends Page {
     )
   );
 
-public function getCMSFields() {
- 
-  $fields = parent::getCMSFields();
- 
-  $gridFieldConfig = GridFieldConfig::create()->addComponents(
-   new GridFieldToolbarHeader(),
-   new GridFieldAddNewButton('toolbar-header-right'),
-   new GridFieldSortableHeader(),
-   new GridFieldDataColumns(),
-   new GridFieldPaginator(20),
-   new GridFieldEditButton(),
-   new GridFieldDeleteAction(),
-   new GridFieldDetailForm()
-  );
- 
-  $conf=GridFieldConfig_RelationEditor::create(10);
-  $conf->addComponent(new GridFieldSortableRows('SortOrder'));
-  $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
+  public function getCMSFields() {
+   
+    $fields = parent::getCMSFields();
+   
+    $gridFieldConfig = GridFieldConfig::create()->addComponents(
+     new GridFieldToolbarHeader(),
+     new GridFieldAddNewButton('toolbar-header-right'),
+     new GridFieldSortableHeader(),
+     new GridFieldDataColumns(),
+     new GridFieldPaginator(20),
+     new GridFieldEditButton(),
+     new GridFieldDeleteAction(),
+     new GridFieldDetailForm()
+    );
+   
+    $conf=GridFieldConfig_RelationEditor::create(10);
+    $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+    $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
 
-  $fields->addFieldToTab("Root.HeroUnit", new GridField("Herounit", "Stuff for homepage", $this->Herounit(), $gridFieldConfig));
+    $fields->addFieldToTab("Root.HeroUnit", new GridField("Herounit", "Stuff for homepage", $this->Herounit(), $gridFieldConfig));
 
-  return $fields;
- }
+    return $fields;
+  }
 
+  // redefine policies to sort by the sort field
+  public function Policies() {
+      return $this->getManyManyComponents('Policies')->sort('SortOrder');
+  }
 
 }
 

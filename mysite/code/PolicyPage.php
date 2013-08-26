@@ -13,22 +13,21 @@ class PolicyPage extends Page {
   );
 
 
+  public function getCMSFields() {
+      $fields=parent::getCMSFields();
 
+      $conf=GridFieldConfig_RelationEditor::create(10);
+      $conf->addComponent(new GridFieldSortableRows('SortOrder'));
 
-    public function getCMSFields() {
-        $fields=parent::getCMSFields();
+      $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
 
-        $conf=GridFieldConfig_RelationEditor::create(10);
-        $conf->addComponent(new GridFieldSortableRows('SortOrder'));
-
-        $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
-
-        return $fields;
-    }
-
-    public function Policies() {
-        return $this->getManyManyComponents('Policies')->sort('SortOrder');
-    }
+      return $fields;
+  }
+  
+  // redefine policies to sort by the sort field
+  public function Policies() {
+      return $this->getManyManyComponents('Policies')->sort('SortOrder');
+  }
 
 
 
@@ -36,6 +35,6 @@ class PolicyPage extends Page {
 
 
 
-class Policy_Controller extends Page_Controller {}
+class PolicyPage_Controller extends Page_Controller {}
 
 ?>
