@@ -1,8 +1,5 @@
-
       <!-- Example row of columns -->
-  
-      <div class="row">
-        
+      <div class="row clearfix">
         <div class="span6">
          $Content  
         </div>

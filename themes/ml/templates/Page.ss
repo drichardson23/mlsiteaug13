@@ -25,57 +25,55 @@
   </head>
 
   <body class="template-$ClassName">
-
-    <div class="navbar<% if $ClassName == HomePage %> homepage-navbar<% end_if %>">
-      <div class="navbar-inner">
-        <div class="container">
-      <!-- Uncomment to enable search -->
-      <!--$SearchForm-->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/"></a>
-
-
-	  <% if Menu(1) %>
-          <div class="nav-collapse">
-           
-<ul class="nav">
-   <% control Menu(1) %>   
-   <!--   <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle -->
-
-<% if Children && $Title !="Home" %>
-<li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle 
-
-      <b class="caret"></b>
-<% else %>
-
-<li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle 
-
- <% end_if %>
-
-      </a>
-         <% if Children && $Title !="Home" %>
-            <ul class="dropdown-menu">
-            <% control Children %>
-               <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle</a></li>
-            <% end_control %>
-            </ul>
-         <% end_if %>
-      </li>
-   <% end_control %>
-</ul>
+  <div class="navbar-wrapper<% if $ClassName == HomePage %> homepage-navbar-wrapper<% end_if %>">
+    <div class="container navbar-container<% if $ClassName == HomePage %> homepage-navbar-container<% end_if %>">
+      <div class="navbar<% if $ClassName == HomePage %> homepage-navbar<% end_if %>">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/"></a>
 
 
+           <% if Menu(1) %>
+            <div class="nav-collapse">
+             
+              <ul class="nav">
+                 <% control Menu(1) %>   
+                 <!--   <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle -->
 
+              <% if Children && $Title !="Home" %>
+              <li class="dropdown"><a class="dropdown-toggle $LinkingMode" data-toggle="dropdown" href="$Link" title="Go to the {$Title} page">$MenuTitle 
 
-          </div><!--/.nav-collapse -->
-          <% end_if %>
+                    <b class="caret"></b>
+              <% else %>
+
+              <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle 
+
+               <% end_if %>
+
+                    </a>
+                       <% if Children && $Title !="Home" %>
+                          <ul class="dropdown-menu">
+                          <% control Children %>
+                             <li><a class="$LinkingMode" href="$Link" title="Go to the {$Title} page">$MenuTitle</a></li>
+                          <% end_control %>
+                          </ul>
+                       <% end_if %>
+                    </li>
+                 <% end_control %>
+              </ul>
+
+            </div><!--/.nav-collapse -->
+            <% end_if %>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
     <% if $ClassName == HomePage %>
