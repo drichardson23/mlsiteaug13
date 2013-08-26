@@ -10,7 +10,10 @@
       'UrlFragment'=>'Varchar',
       'Summary'=>'Text',
       'Details'=>'HTMLText',
+    );
 
+    public static $has_one = array(
+      'Image' => 'Image'
     );
    
     public static $summary_fields = array( 
@@ -33,13 +36,16 @@
         $sum->setRightTitle('A short description of the policy for the homepage');
       $fields->addFieldToTab("Root.Main", new HTMLEditorField('Details') );
 
+      $imageField = new UploadField('Image', 'Image');
+      $imageField->allowedExtensions = array('jpg', 'gif', 'png');
+      $fields->addFieldToTab("Root.Main", $imageField );
+
       return $fields;
     }
 
     public function cssID(){
       return preg_replace('/\W+/', '-', $this->UrlFragment );
     }
-
 
  }
 

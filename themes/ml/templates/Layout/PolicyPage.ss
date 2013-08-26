@@ -1,9 +1,14 @@
 <h1>$title</h1>
 
 <% loop $Policies %> 
-<div class="policypage-policy clearfix" id="$cssID">
+<div class="policypage-policy clearfix $FirstLast" id="$cssID">
   <div class="row">
-    <div class="span8 offset2">
+    <% if $image %>
+    <div class="span3">
+      $image.CroppedImage(370,370)
+    </div>
+    <% end_if %>
+    <div class="span9<% if not $image %> offset2<% end_if %>">
      <h2>$Name</h2>
      $Details
     </div>
