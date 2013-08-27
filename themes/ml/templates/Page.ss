@@ -72,16 +72,16 @@
         <% end_loop %>
       </div>
 
-      <div class="homepage-blurb-shader clearfix">
+      <div class="homepage-blurb-shader clearfix" itemscope itemtype="http://schema.org/Person">
         <div class="container homepage-blurb-shader-inner">     
           <div class="row">
-            <div class="span8">
+            <div class="span8" itemprop="description">
             <% loop $Herounit.Limit(1) %>
               <h2><span>$Blurb</span></h2>
             <% end_loop %>
             </div>
             <div class="span4">
-              $siteConfig.CampaignImage.setWidth(370)
+              <img src="$siteConfig.CampaignImage.setWidth(370).URL" itemprop="image" >
             </div>
           </div>
         </div>
