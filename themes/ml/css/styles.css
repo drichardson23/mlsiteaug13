@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   background:url('../img/blurb-shader.png') 50% 50% repeat-y;
   color: #fff;
   font-style: italic;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 767px) {
