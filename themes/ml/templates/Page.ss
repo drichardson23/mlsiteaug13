@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="$ThemeDir/css/bootstrap.css" rel="stylesheet" media="screen">
+    <!-- styles -->
+    <link href="$ThemeDir/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="$ThemeDir/css/styles.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
 
     <% require themedCSS(bootstrap-responsive) %>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -103,7 +103,7 @@
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
+    <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster tee hee -->
   
