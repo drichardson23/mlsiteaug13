@@ -13,6 +13,7 @@ class PolicyPage extends Page {
   );
 
 
+
   public function getCMSFields() {
       $fields=parent::getCMSFields();
 
@@ -30,11 +31,20 @@ class PolicyPage extends Page {
   }
 
 
-
-
 }
 
 
 
-class PolicyPage_Controller extends Page_Controller {}
+class PolicyPage_Controller extends Page_Controller {
+  public static $url_handlers = array(
+    '$Policy!' => 'policyRedirector',
+  );
+
+
+  public function policyRedirector($request) {
+    $policy = ($request->param('Policy'));
+    $this->redirect('policies/'.'#'.$policy);
+  }
+
+}
 ?>
