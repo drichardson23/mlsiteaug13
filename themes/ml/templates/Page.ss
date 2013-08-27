@@ -4,7 +4,7 @@
     <% base_tag %>
     $MetaTags(false)
     <meta charset="utf-8">
-    <title>$Title</title>
+    <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
