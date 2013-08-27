@@ -1,5 +1,5 @@
 <h1>$title</h1>
-
+$Content
 <% loop $Policies %> 
 <div class="policypage-policy clearfix $FirstLast" id="$cssID">
   <div class="row">
