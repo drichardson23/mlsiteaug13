@@ -4,7 +4,7 @@
     <% base_tag %>
     $MetaTags(false)
     <meta charset="utf-8">
-    <title>$Title | $Sitetitle </title>
+    <title>$Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,7 +14,10 @@
     <link href="$ThemeDir/css/styles.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
 
-    <% require themedCSS(bootstrap-responsive) %>
+    <% require themedCSS(bootstrap-responsive.min) %>
+    
+    <link rel="icon" href="$ThemeDir/img/favicon.png">
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

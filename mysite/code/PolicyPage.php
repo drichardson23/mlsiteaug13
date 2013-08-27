@@ -17,7 +17,7 @@ class PolicyPage extends Page {
   public function getCMSFields() {
       $fields=parent::getCMSFields();
 
-      $conf=GridFieldConfig_RelationEditor::create(10);
+      $conf = GridFieldConfig_RelationEditor::create(10);
       $conf->addComponent(new GridFieldSortableRows('SortOrder'));
 
       $fields->addFieldToTab('Root.Policies', new GridField('Policies', 'Policies', $this->Policies(), $conf));
