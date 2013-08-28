@@ -4,11 +4,11 @@ $Content
 <div class="policypage-policy clearfix $FirstLast" id="$cssID">
   <div class="row">
     <% if $image %>
-    <div class="span3">
-      $image.CroppedImage(370,370)
+    <div class="span1">
+      $image.SetWidth(70)
     </div>
     <% end_if %>
-    <div class="span9<% if not $image %> offset2<% end_if %>">
+    <div class="<% if $image %>span11<% else %> span8 offset2<% end_if %>">
      <h2>$Name</h2>
      $Details
     </div>
